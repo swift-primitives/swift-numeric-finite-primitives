@@ -3,7 +3,7 @@
 public import Finite_Enumerable_Primitives
 public import Numeric_Primitives
 
-extension Numeric.Ternary: Finite.Enumerable {
+extension Numeric.Ternary: @retroactive Finite.Enumerable {
     /// Number of ternary values.
     @inlinable
     public static var count: Cardinal { 3 }

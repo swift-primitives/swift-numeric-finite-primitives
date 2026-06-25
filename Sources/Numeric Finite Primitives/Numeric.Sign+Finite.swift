@@ -3,7 +3,7 @@
 public import Finite_Enumerable_Primitives
 public import Numeric_Primitives
 
-extension Numeric.Sign: Finite.Enumerable {
+extension Numeric.Sign: @retroactive Finite.Enumerable {
     /// Number of sign values.
     @inlinable
     public static var count: Cardinal { 3 }
