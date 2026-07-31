@@ -1,12 +1,17 @@
 import Numeric_Finite_Primitives
 import Testing
 
-@Suite("Enumerable Tests")
-struct EnumerableTests {
+// Covers the shared `Enumerable` conformance across multiple source types
+// (`Numeric.Sign`, `Numeric.Ternary`), not a single owning type, so this uses
+// the top-level backticked-name fallback rather than the extension pattern.
+@Suite
+struct `Enumerable Tests` {
     @Suite struct Unit {}
+    @Suite struct `Edge Case` {}
+    @Suite struct Integration {}
 }
 
-extension EnumerableTests.Unit {
+extension `Enumerable Tests`.Unit {
     @Test
     func `sign count is three`() {
         #expect(Numeric.Sign.count == 3)
