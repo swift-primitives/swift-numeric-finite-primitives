@@ -1,9 +1,6 @@
 import Numeric_Finite_Primitives
 import Testing
 
-// Covers the shared `Enumerable` conformance across multiple source types
-// (`Numeric.Sign`, `Numeric.Ternary`), not a single owning type, so this uses
-// the top-level backticked-name fallback rather than the extension pattern.
 @Suite
 struct `Enumerable Tests` {
     @Suite struct Unit {}

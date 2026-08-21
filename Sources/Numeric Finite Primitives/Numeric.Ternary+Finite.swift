@@ -1,14 +1,11 @@
-// Numeric.Ternary+Finite.swift
-
 public import Finite_Enumerable_Primitives
 public import Numeric_Primitives
 
 extension Numeric.Ternary: @retroactive Finite.Enumerable {
-    /// Number of ternary values.
+
     @inlinable
     public static var count: Cardinal { 3 }
 
-    /// Ordinal of this value (0: negative, 1: zero, 2: positive).
     @inlinable
     public var ordinal: Ordinal {
         switch self {
@@ -18,7 +15,6 @@ extension Numeric.Ternary: @retroactive Finite.Enumerable {
         }
     }
 
-    /// Creates a value from its ordinal.
     @inlinable
     public init(_unchecked: Void, ordinal: Ordinal) {
         self = [.negative, .zero, .positive][ordinal]
